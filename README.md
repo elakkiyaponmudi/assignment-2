@@ -7,9 +7,8 @@
 
 ## Business Use Cases
 
--Identify key insights to enhance marketing strategies.
-
--Optimize inventory management.
+  -Identify key insights to enhance marketing strategies.
+  -Optimize inventory management.
 
 -Improve sales forecasting.
 -Tailor marketing campaigns.
