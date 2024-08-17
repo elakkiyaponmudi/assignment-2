@@ -1,8 +1,8 @@
 
 ## Global Electronics Data Analysis
 ## Project Overview
-**Company:** Global Electronics, a leading retailer of consumer electronics
-**Objective:** Conduct a comprehensive Exploratory Data Analysis (EDA) to uncover insights for enhancing customer satisfaction, optimizing operations, and driving business growth.
+##**Company:** Global Electronics, a leading retailer of consumer electronics
+##**Objective:** Conduct a comprehensive Exploratory Data Analysis (EDA) to uncover insights for enhancing customer satisfaction, optimizing operations, and driving business growth.
 
 ## Business Use Cases
 -Identify key insights to enhance marketing strategies.
