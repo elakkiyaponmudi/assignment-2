@@ -21,10 +21,9 @@
 - **Areas for Improvement:** Identified key areas where the business can improve its operations, marketing, and customer experience.
 
 ## Project Structure
-- **/data:** Contains the datasets used for analysis.
-- **/notebooks:** Jupyter notebooks with detailed analysis and visualizations.
-- **/reports:** Generated reports with insights and recommendations.
-- **/scripts:** Python scripts for data processing and analysis.
+- **dataset.ds:** Contains the cleaned datasets.
+- **Dataspark.ipynb:** contains code for cleaning the datasets.
+- **Presentation:** Generated reports with insights and recommendations.
 - **README.md:** Project overview and instructions.
 
 ## Installation
@@ -33,7 +32,7 @@
    git clone https://github.com/yourusername/your-repository-name.git
 
 ## Prerequisites
--Ensure you have the following software installed:
+-Ensure you have the following software installed
 -Python 3.x
 -Jupyter Notebook
 -Power BI
