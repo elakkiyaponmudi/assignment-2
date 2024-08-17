@@ -8,14 +8,20 @@
 ## Business Use Cases
 
   -Identify key insights to enhance marketing strategies.
+  
   -Optimize inventory management.
+   
+  -Improve sales forecasting.
 
--Improve sales forecasting.
--Tailor marketing campaigns.
--Develop better products.
--Plan effective promotions.
--Decide on store expansions and optimizations.
--Understand the impact of currency exchange rates on sales.
+  -Tailor marketing campaigns.
+
+  -Develop better products.
+  
+  -Plan effective promotions.
+  
+  -Decide on store expansions and optimizations.
+
+  -Understand the impact of currency exchange rates on sales.
 
 ## Key Features
 - **Data Analysis:** Comprehensive analysis of sales data, customer demographics, and product performance.
@@ -36,8 +42,11 @@
 
 ## Prerequisites
 -Ensure you have the following software installed
+
 -Python 3.x
+
 -Jupyter Notebook
+
 -Power BI
 
 
