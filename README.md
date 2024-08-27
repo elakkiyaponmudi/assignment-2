@@ -32,7 +32,7 @@
 ## Project Structure
 - **dataset.ds:** Contains the cleaned datasets.
 - **Dataspark.ipynb:** contains code for cleaning the datasets.
-- **SQL queries**contains 10 queries to create visualization. 
+- **SQL queries:** contains 10 queries to create visualization. 
 - **Presentation:** Generated reports with insights and recommendations.
 - **README.md:** Project overview and instructions.
 
