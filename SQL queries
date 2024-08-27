@@ -1,0 +1,57 @@
+SELECT Gender, COUNT(*) AS Number_of_Customers
+FROM Cleaned_Customers
+GROUP BY Gender;
+
+SELECT YEAR(CURDATE()) - YEAR(Birthday) AS Age, COUNT(*) AS Number_of_Customers
+FROM Cleaned_Customers
+GROUP BY Age;
+
+SELECT Country, COUNT(*) AS Number_of_Customers
+FROM Cleaned_Customers
+GROUP BY Country
+ORDER BY Number_of_Customers DESC;
+
+SELECT s.StoreKey, s.Country, s.State, SUM(p.UnitPriceUSD * sa.Quantity) AS Total_Sales
+FROM Cleaned_Sales sa
+JOIN Cleaned_Stores s ON sa.StoreKey = s.StoreKey
+JOIN Cleaned_Products p ON sa.ProductKey = p.ProductKey
+GROUP BY s.StoreKey, s.Country, s.State
+ORDER BY Total_Sales DESC;
+
+SELECT DATE_FORMAT(sa.OrderDate, '%Y-%m') AS Month, SUM(p.UnitPriceUSD * sa.Quantity) AS Total_Sales
+FROM Cleaned_Sales sa
+JOIN Cleaned_Products p ON sa.ProductKey = p.ProductKey
+GROUP BY Month
+ORDER BY Month;
+
+SELECT p.Category, AVG(p.UnitPriceUSD) AS Average_Sales_Price
+FROM Cleaned_Products p
+GROUP BY p.Category
+ORDER BY Average_Sales_Price DESC;
+
+SELECT s.StoreKey, DATE_FORMAT(sa.OrderDate, '%Y-%m') AS Month, SUM(p.UnitPriceUSD * sa.Quantity) AS Total_Sales
+FROM Cleaned_Sales sa
+JOIN Cleaned_Stores s ON sa.StoreKey = s.StoreKey
+JOIN Cleaned_Products p ON sa.ProductKey = p.ProductKey
+GROUP BY s.StoreKey, Month
+ORDER BY s.StoreKey, Month;
+
+SELECT cu.CustomerKey, cu.Name, AVG(p.UnitPriceUSD * sa.Quantity) AS Average_Order_Value
+FROM Cleaned_Sales sa
+JOIN Cleaned_Customers cu ON sa.CustomerKey = cu.CustomerKey
+JOIN Cleaned_Products p ON sa.ProductKey = p.ProductKey
+GROUP BY cu.CustomerKey, cu.Name
+ORDER BY Average_Order_Value DESC;
+
+SELECT sa.OrderDate, sa.CurrencyCode, SUM(sa.Quantity * p.UnitPriceUSD * er.Exchange) AS Total_Sales_USD
+FROM Cleaned_Sales sa
+JOIN Cleaned_Products p ON sa.ProductKey = p.ProductKey
+JOIN Cleaned_Exchange_Rates er ON sa.CurrencyCode = er.Currency AND sa.OrderDate = er.Date
+GROUP BY sa.OrderDate, sa.CurrencyCode
+ORDER BY sa.OrderDate, sa.CurrencyCode;
+
+SELECT p.ProductKey, p.ProductName, (p.UnitPriceUSD - p.UnitCostUSD) AS Profit_Margin
+FROM Cleaned_Products p
+ORDER BY Profit_Margin DESC;
+
+
